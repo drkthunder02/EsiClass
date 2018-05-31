@@ -361,4 +361,14 @@ class ESI {
 
         return $results;
     }
+    
+    protected function ServerProtocol() {
+        if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+        $protcol = 'https://';
+        } else {
+            $protocol = 'http://';
+        }
+
+        return $protocol;
+    }
 }
